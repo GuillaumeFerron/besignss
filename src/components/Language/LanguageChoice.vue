@@ -28,12 +28,13 @@
     a {
       font-size: 50px;
       text-decoration: none;
-      color: #FFF;
+      color: #B3B3B3;
       font-family: "Bavro", sans-serif;
       transition: all 0.5s;
 
       &:hover {
-        color: crimson;
+        color: #C1272D;
+        font-size: 55px;
       }
     }
   }

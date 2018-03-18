@@ -29,7 +29,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
+    background-color: #001023;
     height: 300px;
   }
 </style>
