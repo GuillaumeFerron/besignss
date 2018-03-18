@@ -1,16 +1,19 @@
 <template>
   <div class="language-choice">
-    <router-link :to="language | filteredUrl">{{language}}</router-link>
+    <router-link :to="language | filteredUrl" append>{{language | upperCase}}</router-link>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'language-choice',
+    name: 'LanguageChoice',
     props: [
       'language'
     ],
     filters: {
+      upperCase: (string) => {
+        return string.toUpperCase()
+      },
       filteredUrl: (string) => {
         // Return only the two first letters of the language, lower cased
         return string.toLowerCase().substr(0, 2)
@@ -19,6 +22,19 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .language-choice {
+    max-width: 250px;
+    a {
+      font-size: 50px;
+      text-decoration: none;
+      color: #FFF;
+      font-family: "Bavro", sans-serif;
+      transition: all 0.5s;
 
+      &:hover {
+        color: crimson;
+      }
+    }
+  }
 </style>

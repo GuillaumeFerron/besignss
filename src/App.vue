@@ -5,18 +5,34 @@
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  export default {
+    name: 'App'
+  }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @font-face {
+    font-family: "Bavro";
+    src: url("../static/fonts/Bavro-Regular.ttf")
+  }
+
+  @font-face {
+    font-family: "Champagne";
+    src: url("../static/fonts/Champagne-Limousines.ttf")
+  }
+
+  @font-face {
+    font-family: "BebasNeue";
+    src: url("../static/fonts/BebasNeue.otf")
+  }
+
+  @font-face {
+    font-family: "Uni";
+    src: url("../static/fonts/Uni-Sans-Thin.otf")
+  }
 </style>

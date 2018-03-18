@@ -23,6 +23,13 @@
   }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .language-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    height: 300px;
+  }
 </style>
