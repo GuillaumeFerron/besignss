@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Landing from '@/components/pages/Landing.vue'
 import Architecture from '@/components/pages/Architecture.vue'
+import Design from '@/components/pages/Design.vue'
 
 Vue.use(Router)
 
@@ -22,23 +23,33 @@ export default new Router({
     },
     {
       path: '/en/home',
-      name: 'Landing-en',
+      name: 'landing-en',
       component: Landing
     },
     {
       path: '/fr/home',
-      name: 'Landing-fr',
+      name: 'landing-fr',
       component: Landing
     },
     {
       path: '/en/architecture',
-      name: 'Architecture-en',
+      name: 'architecture-en',
       component: Architecture
     },
     {
       path: '/fr/architecture',
-      name: 'Architecture-fr',
+      name: 'architecture-fr',
       component: Architecture
+    },
+    {
+      path: '/en/design',
+      name: 'design-en',
+      component: Design
+    },
+    {
+      path: '/fr/design',
+      name: 'design-fr',
+      component: Design
     }
   ]
 })
