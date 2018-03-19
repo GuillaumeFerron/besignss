@@ -12,6 +12,14 @@ export default new Router({
       redirect: '/en/home'
     },
     {
+      path: '/en',
+      redirect: '/en/home'
+    },
+    {
+      path: '/fr',
+      redirect: '/fr/home'
+    },
+    {
       path: '/en/home',
       name: 'Landing',
       component: Landing
