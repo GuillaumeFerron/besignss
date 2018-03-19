@@ -31,5 +31,6 @@
     align-items: center;
     background-color: #001023;
     height: 300px;
+    width: 100%;
   }
 </style>

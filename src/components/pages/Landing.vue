@@ -1,5 +1,7 @@
 <template>
-  <language/>
+  <div class="landing-container">
+    <language/>
+  </div>
 </template>
 
 <script>
@@ -14,4 +16,9 @@
 </script>
 
 <style lang="scss" scoped>
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 </style>

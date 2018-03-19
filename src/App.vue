@@ -1,11 +1,19 @@
 <template>
   <div id="app">
-    <router-view/>
+    <be-header/>
+    <div id="content">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
+  import BeHeader from '@/components/BeHeader.vue'
+
   export default {
+    components: {
+      BeHeader
+    },
     name: 'App'
   }
 </script>
@@ -15,7 +23,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
+  #content {
+    padding-top: 46px;
+  }
   @font-face {
     font-family: "Bavro";
     src: url("../static/fonts/Bavro-Regular.ttf")
