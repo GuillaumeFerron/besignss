@@ -1,7 +1,7 @@
 <template>
-  <router-link :to="language | filteredUrl" class="language-choice">
+  <a :href="language | filteredUrl($route.path)" class="language-choice">
     <p class="language-label">{{language | upperCase}}</p>
-  </router-link>
+  </a>
 </template>
 
 <script>
@@ -14,9 +14,9 @@
       upperCase: (string) => {
         return string.toUpperCase()
       },
-      filteredUrl: (string) => {
+      filteredUrl: (string, actualRoute) => {
         // Return only the two first letters of the language, lower cased
-        return string.toLowerCase().substr(0, 2)
+        return '/' + string.toLowerCase().substr(0, 2) + '/' + actualRoute.replace(actualRoute.substring(0, 4), '')
       }
     }
   }
