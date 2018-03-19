@@ -2,7 +2,7 @@
   <div class="be-container">
     <div class="be-name">EMILIEN BOÜEXEL</div>
     <div class="be-logo">
-      <img src="" alt="Besignss' Logo"/>
+      <img src="@/assets/logo/logo.png" alt="Besignss' Logo"/>
     </div>
   </div>
 </template>
@@ -38,6 +38,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      img {
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 </style>

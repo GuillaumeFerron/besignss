@@ -1,7 +1,8 @@
 <template>
   <div class="header-container">
-    <div class="header-home">
-    </div>
+    <router-link :to="$route.path.substring(0,4) + `home`" class="header-home">
+      <img src="@/assets/logo/logo.png"/>
+    </router-link>
     <div class="header-nav">
       <router-link class="architecture-header" v-bind:class="{active: $route.path.indexOf(`/architecture`) !== -1}" :to="$route.path.substring(0,3) + `/architecture`">ARCHITECTURE</router-link>
       <router-link class="bio-header" v-bind:class="{active: $route.path.indexOf(`/bio`) !== -1}" :to="$route.path.substring(0,3) + `/bio`">BIO</router-link>
@@ -65,6 +66,12 @@
       .active {
         color: #C1272D;
         text-decoration: line-through;
+      }
+    }
+    .header-home {
+      img {
+        width: 50px;
+        height: 50px;
       }
     }
     .header-lang {
