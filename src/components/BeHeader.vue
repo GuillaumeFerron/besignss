@@ -1,15 +1,15 @@
 <template>
   <div class="header-container">
-    <router-link class="architecture-header" to="/architecture">ARCHITECTURE</router-link>
-    <router-link class="bio-header" to="/bio">BIO</router-link>
-    <router-link class="design-header" to="/design" v-if="$route.path.indexOf(`/en/`) !== -1">GRAPHIC DESIGN</router-link>
-    <router-link class="design-header" to="/design" v-else-if="$route.path.indexOf(`/fr/`) !== -1">GRAPHISME</router-link>
+    <router-link class="architecture-header" v-bind:class="{active: $route.path.indexOf(`/architecture`) !== -1}" :to="$route.path.substring(0,3) + `/architecture`">ARCHITECTURE</router-link>
+    <router-link class="bio-header" v-bind:class="{active: $route.path.indexOf(`/bio`) !== -1}" :to="$route.path.substring(0,3) + `/bio`">BIO</router-link>
+    <router-link class="design-header" v-bind:class="{active: $route.path.indexOf(`/design`) !== -1}" :to="$route.path.substring(0,3) + `/design`" v-if="$route.path.indexOf(`/en/`) !== -1">GRAPHIC DESIGN</router-link>
+    <router-link class="design-header" v-bind:class="{active: $route.path.indexOf(`/design`) !== -1}" :to="$route.path.substring(0,3) + `/design`" v-else-if="$route.path.indexOf(`/fr/`) !== -1">GRAPHISME</router-link>
   </div>
 </template>
 
 <script>
     export default {
-        name: 'be-header'
+      name: 'be-header'
     }
 </script>
 
@@ -30,6 +30,7 @@
       font-size: 30px;
       text-decoration: none;
       color: #B3B3B3;
+      transition: all 0.5s;
     }
     .design-header {
       font-family: "Bebas Neue", sans-serif;
@@ -37,6 +38,7 @@
       font-size: 30px;
       text-decoration: none;
       color: #B3B3B3;
+      transition: all 0.5s;
     }
     .bio-header {
       font-family: "Bebas Neue", sans-serif;
@@ -44,6 +46,11 @@
       font-size: 30px;
       text-decoration: none;
       color: #B3B3B3;
+      transition: all 0.5s;
+    }
+    .active {
+      color: #C1272D;
+      text-decoration: line-through;
     }
   }
 </style>
