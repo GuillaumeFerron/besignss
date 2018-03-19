@@ -2,7 +2,8 @@
   <div class="header-container">
     <router-link class="architecture-header" to="/architecture">ARCHITECTURE</router-link>
     <router-link class="bio-header" to="/bio">BIO</router-link>
-    <router-link class="design-header" to="/design">GRAPHIC DESIGN</router-link>
+    <router-link class="design-header" to="/design" v-if="$route.path.indexOf(`/en/`) !== -1">GRAPHIC DESIGN</router-link>
+    <router-link class="design-header" to="/design" v-else-if="$route.path.indexOf(`/fr/`) !== -1">GRAPHISME</router-link>
   </div>
 </template>
 
