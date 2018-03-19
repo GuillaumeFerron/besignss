@@ -28,21 +28,21 @@
   }
   @font-face {
     font-family: "Bavro";
-    src: url("../static/fonts/Bavro-Regular.ttf")
+    src: url("./assets/fonts/Bavro-Regular.ttf")
   }
 
   @font-face {
     font-family: "Champagne";
-    src: url("../static/fonts/Champagne-Limousines.ttf")
+    src: url("./assets/fonts/Champagne-Limousines.ttf")
   }
 
   @font-face {
     font-family: "BebasNeue";
-    src: url("../static/fonts/BebasNeue.otf")
+    src: url("./assets/fonts/BebasNeue.otf")
   }
 
   @font-face {
     font-family: "Uni";
-    src: url("../static/fonts/Uni-Sans-Thin.otf")
+    src: url("./assets/fonts/Uni-Sans-Thin.otf")
   }
 </style>
