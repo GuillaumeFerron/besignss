@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin: 0 0 150px 0;
     height: 250px;
     width: 100%;
     background-color: #B3B3B3;

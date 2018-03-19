@@ -38,13 +38,13 @@
     text-decoration: none;
 
     &:hover {
-      background-color: rgba(193, 39, 45, 0.05);
+      background-color: rgba(0, 16, 35, 0.05);
       cursor: pointer;
       color: #C1272D;
       font-size: 55px;
       p {
         font-size: 55px;
-        color: #C1272D;
+        color: #B3B3B3;
       }
     }
     p {
