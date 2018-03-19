@@ -8,7 +8,7 @@
   import LanguageChoice from '@/components/Language/LanguageChoice'
 
   export default {
-    name: 'Language',
+    name: 'language',
     data  () {
       return {
         availLanguages: [

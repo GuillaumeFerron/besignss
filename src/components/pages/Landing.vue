@@ -6,7 +6,7 @@
   import Language from '@/components/Language/Language.vue'
 
   export default {
-    name: 'Landing',
+    name: 'landing',
     components: {
       Language
     }

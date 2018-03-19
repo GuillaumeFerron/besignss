@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'LanguageChoice',
+    name: 'language-choice',
     props: [
       'language'
     ],
