@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <be-header/>
-    <div id="content">
+    <be-header v-if="$route.path.indexOf(`/home`) === -1"/>
+    <div v-bind:class="{nothome: $route.path.indexOf(`/home`) === -1}">
       <router-view/>
     </div>
   </div>
@@ -23,7 +23,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  #content {
+  .nothome {
     padding-top: 46px;
   }
   @font-face {
