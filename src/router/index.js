@@ -8,6 +8,15 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/en/home'
+    },
+    {
+      path: '/en/home',
+      name: 'Landing',
+      component: Landing
+    },
+    {
+      path: '/fr/home',
       name: 'Landing',
       component: Landing
     }
