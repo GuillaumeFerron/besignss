@@ -38,9 +38,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 150px 0 150px 0;
     background-color: #C1272D;
-    height: 300px;
+    height: 80vh;
     width: 100%;
   }
 </style>
