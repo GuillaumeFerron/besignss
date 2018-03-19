@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Landing from '@/components/pages/Landing.vue'
 import Architecture from '@/components/pages/Architecture.vue'
 import Design from '@/components/pages/Design.vue'
+import Bio from '@/components/pages/Bio.vue'
 
 Vue.use(Router)
 
@@ -50,6 +51,16 @@ export default new Router({
       path: '/fr/design',
       name: 'design-fr',
       component: Design
+    },
+    {
+      path: '/en/bio',
+      name: 'bio-en',
+      component: Bio
+    },
+    {
+      path: '/fr/bio',
+      name: 'bio-fr',
+      component: Bio
     }
   ]
 })
