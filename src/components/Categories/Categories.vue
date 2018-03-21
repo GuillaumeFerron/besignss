@@ -1,6 +1,11 @@
 <template>
-  <div class="categories-container">
-    <category-choice v-for="item in categoriesArray" :key="item" :category="item"/>
+  <div v-if="layout === 1" class="categories-container" v-bind:style="{ backgroundColor : bgColor}">
+    <category-choice :label="label" :empty="false"/>
+    <category-choice :empty="true" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam dolor ac condimentum bibendum."/>
+  </div>
+  <div v-else class="categories-container" v-bind:style="{ backgroundColor : bgColor}">
+    <category-choice :empty="true" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam dolor ac condimentum bibendum."/>
+    <category-choice :label="label" :empty="false"/>
   </div>
 </template>
 
@@ -9,21 +14,15 @@
 
   export default {
     name: '',
-    data  () {
-      if (this.$route.path.indexOf('/en/') !== -1) {
-        return {
-          categoriesArray: [
-            'Architecture',
-            'Design'
-          ]
-        }
-      } else {
-        return {
-          categoriesArray: [
-            'Architecture',
-            'Graphisme'
-          ]
-        }
+    props: {
+      label: {
+        type: String
+      },
+      layout: {
+        type: Number
+      },
+      bgColor: {
+        type: String
       }
     },
     components: {
@@ -38,7 +37,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #C1272D;
     height: 80vh;
     width: 100%;
   }

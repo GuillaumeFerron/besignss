@@ -1,15 +1,26 @@
 <template>
-  <router-link :to="category | filteredUrl" class="category-choice parallax" v-bind:class="category.toLowerCase()">
-    <p class="category-label">{{category | upperCase}}</p>
+  <router-link v-if="!empty" :to="label | filteredUrl" class="category-choice parallax" v-bind:class="label.toLowerCase()">
+    <p class="category-label">{{label | upperCase}}</p>
   </router-link>
+  <div v-else class="category-empty">
+    <p class="category-content">{{content}}</p>
+  </div>
 </template>
 
 <script>
   export default {
     name: 'category-choice',
-    props: [
-      'category'
-    ],
+    props: {
+      label: {
+        type: String
+      },
+      empty: {
+        type: Boolean
+      },
+      content: {
+        type: String
+      }
+    },
     filters: {
       upperCase: (string) => {
         return string.toUpperCase()
@@ -47,7 +58,7 @@
       font-size: 55px;
       p {
         font-size: 55px;
-        color: #B3B3B3;
+        color: #C1272D;
       }
     }
     p {
@@ -55,6 +66,26 @@
       color: #001023;
       font-family: "Bavro", sans-serif;
       transition: all 0.5s;
+    }
+  }
+  .category-empty {
+    width: 50%;
+    max-width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s;
+    text-decoration: none;
+    .category-content {
+      padding: 10px;
+      font-size: 40px;
+      max-width: 100%;
+      max-height: 100%;
+      word-break: break-all;
+      color: #FFF;
+      font-family: Champagne, sans-serif;
     }
   }
   .architecture {

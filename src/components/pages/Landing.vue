@@ -2,7 +2,8 @@
   <div class="landing-container">
     <be-block/>
     <language/>
-    <categories/>
+    <categories label="Architecture" :layout="1" bgColor="#C1272D"/>
+    <categories label="Design" :layout="2" bgColor="#C1272D"/>
   </div>
 </template>
 
