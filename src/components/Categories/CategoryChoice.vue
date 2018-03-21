@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="category | filteredUrl" class="category-choice">
+  <router-link :to="category | filteredUrl" class="category-choice parallax" v-bind:class="category.toLowerCase()">
     <p class="category-label">{{category | upperCase}}</p>
   </router-link>
 </template>
@@ -36,6 +36,9 @@
     justify-content: center;
     transition: all 0.5s;
     text-decoration: none;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
     &:hover {
       background-color: rgba(0, 16, 35, 0.05);
@@ -53,5 +56,14 @@
       font-family: "Bavro", sans-serif;
       transition: all 0.5s;
     }
+  }
+  .architecture {
+    background-image: url("../../assets/landing/architecture.jpeg");
+  }
+  .design {
+    background-image: url("../../assets/landing/design.png");
+  }
+  .graphisme {
+    background-image: url("../../assets/landing/design.png");
   }
 </style>
