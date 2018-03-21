@@ -1,7 +1,7 @@
 <template>
   <div class="header-container">
     <router-link :to="$route.path.substring(0,4) + `home`" class="header-home">
-      <img src="@/assets/logo/logo.png"/>
+      <img src="@/assets/logo/logo.svg"/>
     </router-link>
     <div class="header-nav">
       <router-link class="architecture-header" v-bind:class="{active: $route.path.indexOf(`/architecture`) !== -1}" :to="$route.path.substring(0,3) + `/architecture`">ARCHITECTURE</router-link>
@@ -70,8 +70,8 @@
     }
     .header-home {
       img {
-        width: 50px;
-        height: 50px;
+        width: 75px;
+        height: 75px;
       }
     }
     .header-lang {
